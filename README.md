@@ -6,7 +6,9 @@ This website is full responsive.
 ## To see the development on any other devices
 
 To start a local development server on multiple devices, run:
+
 192.168.1.75 replace it with your wifi connections and don't froget to keep all device in same network.
+
 Open json server on http://192.168.1.75:3000
 
 
