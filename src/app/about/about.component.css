@@ -17,3 +17,9 @@
 .about p {
     font-size: 20px;
 }
+
+@media screen and (width <= 750px) {
+    .about{
+        width: 90%;
+    }
+}

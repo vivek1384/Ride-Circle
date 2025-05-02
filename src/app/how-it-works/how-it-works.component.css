@@ -18,3 +18,9 @@
     flex-direction: column;
     gap: 4px;
 }
+
+@media screen and (width <= 750px) {
+    .container .one, .container .two, .container .three{
+        width: 85%;
+    }
+}
