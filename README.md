@@ -1,59 +1,74 @@
-# RideCircle
+# 🚗 SmartRide — Angular Ride Sharing Web App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+SmartRide is a ride-sharing platform built with Angular to help users share their rides, reduce traffic congestion, and promote eco-friendly commuting.
 
-## Development server
+## 🌍 Purpose
 
-To start a local development server, run:
+With increasing urban traffic and environmental concerns, SmartRide connects drivers and riders traveling in the same direction, helping reduce redundant vehicle usage and lowering carbon footprints.
+
+---
+
+## 🚀 Features
+
+### 🧑‍💼 Rider Flow
+- Sign up / Log in
+- Enter pickup & drop locations
+- View available rides (List & Map)
+- Request a ride
+- Live tracking during the ride
+- Complete the ride
+
+### 🚘 Driver Flow
+- Sign up / Log in
+- Add new ride (route, time)
+- Set available seats & fare
+- Publish ride
+- Receive and manage requests
+- Live tracking during the ride
+- Complete the ride and rate riders
+
+### 🔁 Common Features
+- Profile Management
+- Ride History (Past & Upcoming)
+- In-app Chat / Messaging
+- Notifications (Push / Email)
+- Settings (Availability, Preferences)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Angular 19 (Standalone Components, Signals, Routing)
+- **State Management**: Reactive Forms, Component Store
+- **Backend (Mock/Dev)**: JSON Server or Node.js (API simulation)
+- **UI**: Responsive design for desktop & mobile
+- **Other**: Google Maps / Mapbox for location tracking
+
+---
+
+## 📡 Backend (Mock API)
+
+This project uses `json-server` as a lightweight mock backend to simulate API requests during development.
+
+### 🔧 Start JSON Server
 
 ```bash
-ng serve
+# Install json-server globally if not already installed
+npm install -g json-server
+
+# Start the mock server locally
+json-server --watch db.json
+
+# OR to access from other devices on the same network
+json-server --watch db.json --host 192.168.1.75 --port 3000
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+# OR to access from other devices on your local network
+```
+ng serve --open --host=192.168.1.75
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+# (In a new terminal) Start the mock backend server
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
+json-server --watch db.json --host 192.168.1.75 --port 3000
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
