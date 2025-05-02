@@ -1,4 +1,19 @@
 # RideCircle
+This is complete ride sharing aap where user can seek and offer a ride. the main motive is to reduce the number of vehicle on road. It is also a eco-friendly as it reduce the polution. This webApp also useful to reduce the use of fuels as well as it is reduce the cost of our journey.
+
+This website is full responsive.
+
+## To see the development on any other devices
+
+To start a local development server on multiple devices, run:
+192.168.1.75 replace it with your wifi connections and don't froget to keep all device in same network.
+Open json server on http://192.168.1.75:3000
+
+
+```bash
+ng s --o --host=192.168.1.75
+json-server --watch db.json --host 192.168.1.75 --port 3000
+```
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
@@ -8,6 +23,15 @@ To start a local development server, run:
 
 ```bash
 ng serve
+```
+
+## Json server
+
+To start a Json server, run:
+
+```bash
+npm i -g json-server
+json-server --watch db.json
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
