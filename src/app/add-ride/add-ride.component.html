@@ -33,13 +33,15 @@
     <div class="right">
         <h1>Your Published Rides:</h1>
         @for (item of rideList; track $index) {
-            <div class="ride">
-                <h3>From : {{item.from}}</h3>
-                <h3>To : {{item.to}}</h3>
-                <h3>Car : {{item.carname}}</h3>
-                <h3>Date : {{item.date | date : 'dd-MM-yyyy'}}</h3>
-                <button (click)="seeRequest(item.id)">See Request</button>
-            </div>
+        <div class="ride">
+            <h3>From : {{item.from}}</h3>
+            <h3>To : {{item.to}}</h3>
+            <h3>Car : {{item.carname}}</h3>
+            <h3>Date : {{item.date | date : 'dd-MM-yyyy'}}</h3>
+            <button (click)="seeRequest(item.id)">See Request</button>
+        </div>
         }
     </div>
 </div>
+
+<app-footer></app-footer>

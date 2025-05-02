@@ -4,10 +4,11 @@ import { ServiceService } from '../service.service';
 import { Request, Ride, User } from '../app.component';
 import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-ride',
-  imports: [HeaderComponent, DatePipe],
+  imports: [HeaderComponent, DatePipe, FooterComponent],
   templateUrl: './ride.component.html',
   styleUrl: './ride.component.css',
 })

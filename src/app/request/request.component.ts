@@ -3,10 +3,11 @@ import { HeaderComponent } from '../header/header.component';
 import { AcceptedRequest, Request, Ride } from '../app.component';
 import { ServiceService } from '../service.service';
 import { DatePipe, NgStyle } from '@angular/common';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-request',
-  imports: [HeaderComponent, DatePipe, NgStyle],
+  imports: [HeaderComponent, DatePipe, NgStyle, FooterComponent],
   templateUrl: './request.component.html',
   styleUrl: './request.component.css',
 })

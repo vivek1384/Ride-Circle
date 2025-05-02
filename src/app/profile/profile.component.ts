@@ -5,10 +5,11 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { ServiceService } from '../service.service';
 import { User } from '../app.component';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-profile',
-  imports: [HeaderComponent, FontAwesomeModule],
+  imports: [HeaderComponent, FontAwesomeModule, FooterComponent],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css',
 })

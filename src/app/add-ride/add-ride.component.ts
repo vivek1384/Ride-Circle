@@ -5,10 +5,11 @@ import { Ride, User } from '../app.component';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-add-ride',
-  imports: [HeaderComponent, FormsModule, DatePipe],
+  imports: [HeaderComponent, FormsModule, DatePipe, FooterComponent],
   templateUrl: './add-ride.component.html',
   styleUrl: './add-ride.component.css',
 })

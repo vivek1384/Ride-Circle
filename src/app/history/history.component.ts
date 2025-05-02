@@ -4,10 +4,11 @@ import { ServiceService } from '../service.service';
 import { Request, Reviewer, User } from '../app.component';
 import { NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-history',
-  imports: [HeaderComponent, NgStyle, FormsModule],
+  imports: [HeaderComponent, NgStyle, FormsModule, FooterComponent],
   templateUrl: './history.component.html',
   styleUrl: './history.component.css',
 })
