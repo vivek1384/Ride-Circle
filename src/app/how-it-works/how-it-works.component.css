@@ -1,0 +1,20 @@
+.container{
+    height: 94dvh;
+    background: #e6fafc;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: scroll;
+}
+
+.container .one, .container .two, .container .three{
+    padding: 1rem;
+    width: 50%;
+    background: #fff;
+    margin-top: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

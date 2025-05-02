@@ -6,6 +6,8 @@ import { RequestComponent } from './request/request.component';
 import { LoginComponent } from './login/login.component';
 import { HistoryComponent } from './history/history.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
   {
@@ -40,5 +42,13 @@ export const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
-  }
+  },
+  {
+    path: 'how-it-works',
+    component: HowItWorksComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
 ];

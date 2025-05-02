@@ -1,0 +1,19 @@
+.container{
+    height: 94dvh;
+    background: #e6fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+.about{
+    width: 50%;
+    margin: auto;   
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about p {
+    font-size: 20px;
+}
