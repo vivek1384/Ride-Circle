@@ -1,0 +1,45 @@
+<app-header />
+<div class="container">
+    <div class="left">
+        <form action="">
+            <input autocomplete="off" type="text" placeholder="From..." [(ngModel)]="ride.from" name="from">
+            <input autocomplete="off" type="text" placeholder="To..." [(ngModel)]="ride.to" name="to">
+            <input autocomplete="off" type="date" placeholder="Date..." [(ngModel)]="ride.date" name="date">
+            <input autocomplete="off" type="text" placeholder="Seat..." [(ngModel)]="ride.member" name="member">
+            <input autocomplete="off" type="text" placeholder="Car name" [(ngModel)]="ride.carname" name="carname">
+            <input autocomplete="off" type="text" placeholder="Via 1" [(ngModel)]="ride.via1" name="via1">
+            <input autocomplete="off" type="text" placeholder="Via 2" [(ngModel)]="ride.via2" name="via2">
+            <input autocomplete="off" type="text" placeholder="Via 3" [(ngModel)]="ride.via3" name="via3">
+            <div>
+                <label for="">Price of : {{ride.from}} to {{ride.via1}}</label>
+                <input autocomplete="off" type="number" [(ngModel)]="ride.formtoVia1" name="formtoVia1">
+            </div>
+            <div>
+                <label for="">Price of : {{ride.via1}} to {{ride.via2}}</label>
+                <input autocomplete="off" type="number" [(ngModel)]="ride.via1oVia2" name="via1oVia2">
+            </div>
+            <div>
+                <label for="">Price of : {{ride.via2}} to {{ride.via3}}</label>
+                <input autocomplete="off" type="number" [(ngModel)]="ride.via2oVia3" name="via2oVia3">
+            </div>
+            <div>
+                <label for="">Price of : {{ride.via3}} to {{ride.to}}</label>
+                <input autocomplete="off" type="number" [(ngModel)]="ride.via3toEnd" name="via3toEnd">
+            </div>
+            <button (click)="addRide()">Offer Ride</button>
+        </form>
+    </div>
+    <hr>
+    <div class="right">
+        <h1>Your Published Rides:</h1>
+        @for (item of rideList; track $index) {
+            <div class="ride">
+                <h3>From : {{item.from}}</h3>
+                <h3>To : {{item.to}}</h3>
+                <h3>Car : {{item.carname}}</h3>
+                <h3>Date : {{item.date | date : 'dd-MM-yyyy'}}</h3>
+                <button (click)="seeRequest(item.id)">See Request</button>
+            </div>
+        }
+    </div>
+</div>

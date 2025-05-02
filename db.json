@@ -1,0 +1,115 @@
+{
+  "user": [
+    {
+      "id": "36dd",
+      "name": "Vivek Dudhatra",
+      "email": "vivekdudhatra13@gmail.com",
+      "password": "13082004",
+      "review": []
+    },
+    {
+      "id": "9718",
+      "name": "Akhil Hapani",
+      "email": "akhil@gmail.com",
+      "password": "2410",
+      "review": []
+    },
+    {
+      "id": "7f3a",
+      "name": "Chirag Dudhatra",
+      "email": "chirag@gmail.com",
+      "password": "9909",
+      "review": [
+        {
+          "reviewerName": "Vivek Dudhatra ",
+          "reviewMessage": "Nice driving experience.",
+          "rating": 5
+        },
+        {
+          "reviewerName": "Akhil Hapani",
+          "reviewMessage": "Nice journey with chirag dudhatra.",
+          "rating": 4
+        }
+      ]
+    }
+  ],
+  "ride": [
+    {
+      "id": "fe94",
+      "driverName": "Chirag Dudhatra",
+      "driverEmail": "chirag@gmail.com",
+      "driverId": "7f3a",
+      "from": "Surat",
+      "to": "Limadhra",
+      "member": "3",
+      "booked": 2,
+      "available": 1,
+      "carname": "Verna",
+      "via1": "Vadodara",
+      "via2": "Rajkot",
+      "via3": "Junagadh",
+      "formtoVia1": 200,
+      "via1oVia2": 400,
+      "via2oVia3": 150,
+      "via3toEnd": 100,
+      "total": 850,
+      "request": [
+        {
+          "requestFrom": "Vivek Dudhatra",
+          "from": "Surat",
+          "to": "Junagadh",
+          "fee": 750,
+          "member": 1,
+          "total": 750,
+          "date": "2025-05-01"
+        },
+        {
+          "requestFrom": "Akhil Hapani",
+          "from": "Surat",
+          "to": "Junagadh",
+          "fee": 750,
+          "member": 2,
+          "total": 1500,
+          "date": "2025-05-01"
+        }
+      ],
+      "date": "2025-05-01"
+    }
+  ],
+  "request": [
+    {
+      "id": "3275",
+      "rideId": "fe94",
+      "requestFrom": "Vivek Dudhatra",
+      "requestFromId": "36dd",
+      "requestTo": "Chirag Dudhatra",
+      "requestToId": "7f3a",
+      "from": "Surat",
+      "to": "Junagadh",
+      "fee": 750,
+      "member": 1,
+      "total": 750,
+      "date": "2025-05-01",
+      "accepted": "Accepted",
+      "markASC": true,
+      "sent": true
+    },
+    {
+      "id": "d9f8",
+      "rideId": "fe94",
+      "requestFrom": "Akhil Hapani",
+      "requestFromId": "9718",
+      "requestTo": "Chirag Dudhatra",
+      "requestToId": "7f3a",
+      "from": "Surat",
+      "to": "Junagadh",
+      "fee": 750,
+      "member": 2,
+      "total": 1500,
+      "date": "2025-05-01",
+      "accepted": "Accepted",
+      "markASC": true,
+      "sent": true
+    }
+  ]
+}

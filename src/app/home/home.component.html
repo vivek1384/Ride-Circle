@@ -1,0 +1,52 @@
+<app-header />
+<div class="container">
+    <div class="top">
+        <div class="left">
+            <div class="circle">
+
+            </div>
+            <div class="heading">
+                <h1>RideCircle</h1>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Your Ride - Anytime, Anywhere</h1>
+            <p> Say goodbye to waiting, guessing, and expensive rides. With RideEase, you get fast, affordable, and
+                secure transportation at your fingertips. Track your driver in real time, choose your ride type, and get
+                moving - whether it's your daily commute, a night out, or a trip to the airport.</p>
+            <p>Built for comfort, powered by technology, and trusted by thousands.</p>
+            <p>Download the app or sign up now - your next ride is seconds away.</p>
+            <button routerLink="/add-ride">Get Started</button>
+        </div>
+    </div>
+    <div class="down">
+        <div class="box">
+            <input type="text" placeholder="From..." [(ngModel)]="from" name="from" autocomplete="off">
+            <hr>
+            <input type="text" placeholder="To..." [(ngModel)]="to" name="to" autocomplete="off">
+            <hr>
+            <input autocomplete="off" type="date" placeholder="Date..." [(ngModel)]="date" name="date">
+            <hr>
+            <input type="number" placeholder="Member..." [(ngModel)]="member" name="member" autocomplete="off">
+            <button (click)="onSearch()">Search</button>
+        </div>
+        <div class="box2">
+            <!-- @if(rideList2.length == 0){
+            <div class="ride">
+                <h3>{{message}}</h3>
+            </div>
+            }@else { -->
+            @for (item of rideList2; track $index) {
+            <div class="ride" (click)="onClickRide(item.id)">
+                <h3>From : {{item.from}} | To : {{item.to}}</h3>
+                <h3>{{item.driverName}}</h3>
+                <h3>Date : {{item.date | date : 'dd-MM-yyyy'}} | Seat Available : {{item.member}}</h3>
+            </div>
+            }
+            <!-- }x  -->
+
+        </div>
+    </div>
+</div>
+
+<app-footer/>

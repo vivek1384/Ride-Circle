@@ -1,0 +1,108 @@
+.container {
+    height: calc(100dvh - 4rem);
+    width: 100vw;
+    background: #e6fafc;
+    color: #6ba368;
+    padding-top: 4rem;
+    overflow: hidden;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.left {
+    width: calc(100vw + 9rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.left .circle {
+    height: 150px;
+    width: 150px;
+    border: 18px dotted #6ba368;
+    border-radius: 50%;
+    animation: vivek;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.left .heading {
+    margin-left: -9rem;
+    background: #e6fafc;
+    z-index: 1;
+    font-size: 30px;
+    margin-right: 8rem;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 2rem;
+    border: 2px solid #6ba368;
+    border-radius: 12px;
+    align-items: center;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+form input {
+    width: 100%;
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 15px;
+    color: #6ba368;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+form button {
+    width: 50%;
+    color: #6ba368;
+    background: #fff;
+    border: none;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+form button:hover {
+    border: 2px solid #6ba368;
+}
+
+form p span {
+    color: #353d2f;
+    cursor: pointer;
+}
+
+@media screen and (width <=750px) {
+    form {
+        width: calc(90% - 4rem);
+    }
+
+    .left {
+        margin-left: -8px;
+    }
+}
+
+@keyframes vivek {
+    from {}
+
+    to {
+        rotate: 360deg;
+    }
+
+}

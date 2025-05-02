@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="left">
+        <div class="circle">
+
+        </div>
+        <div class="heading">
+            <h1>RideCircle</h1>
+        </div>
+    </div>
+    <h2>Your Ride - Anytime, Anywhere</h2>
+    @if(!isSignUp){
+    <form action="">
+        <h1>Sign Up Form</h1>
+        <input type="text" placeholder="Enter Your Name" [(ngModel)]="user.name" name="name" autocomplete="off">
+        <input type="text" placeholder="Enter Your Email" [(ngModel)]="user.email" name="email" autocomplete="off">
+        <input type="password" placeholder="Enter Your Password" [(ngModel)]="user.password" name="password"
+            autocomplete="off">
+        <button (click)="signUp()">Sign Up</button>
+        <p>Already have an account ? <span (click)="onClick()">Login Here!</span></p>
+    </form>
+    }@else {
+    <form action="">
+        <h1>Log In Form</h1>
+        <input type="text" placeholder="Enter Your Email" [(ngModel)]="user.email" name="email" autocomplete="off">
+        <input type="password" placeholder="Enter Your Password" [(ngModel)]="user.password" name="password"
+            autocomplete="off">
+        <button (click)="login()">Log In</button>
+        <p>Don't have an account ? <span (click)="onClick()">SignUp Here!</span></p>
+    </form>
+    }
+
+</div>

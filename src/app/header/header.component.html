@@ -1,0 +1,37 @@
+<div class="container">
+    <p routerLink="/home">RideCircle</p>
+
+    <div>
+        <p routerLink="/home">
+            <span><fa-icon [icon]="icon3"></fa-icon></span> Want to seek a ride ?
+        </p>
+        <p routerLink="/add-ride">
+            <span><fa-icon [icon]="icon2"></fa-icon></span> Want to offer a ride ?
+        </p>
+        <p routerLink="/profile">
+            {{user.name}}
+        </p>
+        <p (click)="logout()">
+            Logout
+        </p>
+        <!-- <p>Vivek Dudhatra</p> -->
+    </div>
+</div>
+
+<div class="container-m">
+    <h1 routerLink="/home">RideCircle</h1>
+    @if(!menuOpen){
+    <p (click)="openClose()"><fa-icon [icon]="icon1"></fa-icon></p>
+    }@else {
+    <p (click)="openClose()"><fa-icon [icon]="icon4"></fa-icon></p>
+    }
+</div>
+@if(menuOpen){
+<div class="menu">
+    <h3 routerLink="/home"><span><fa-icon [icon]="icon3"></fa-icon></span> Want to seek a ride ?</h3>
+    <h3 routerLink="/add-ride"><span><fa-icon [icon]="icon2"></fa-icon></span> Want to offer a ride ?</h3>
+    <h3 routerLink="/history">History</h3>
+    <h3 routerLink="/profile"> {{user.name}}</h3>
+    <h3 (click)="logout()">Log Out</h3>
+</div>
+}

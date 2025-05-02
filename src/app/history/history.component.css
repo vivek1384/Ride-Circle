@@ -1,0 +1,134 @@
+.main {
+    height: calc(94dvh);
+    background: #e6fafc;
+    overflow-y: scroll;
+}
+
+.container {
+    background: #e6fafc;
+    width: calc(100% - 2rem);
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: start;
+    padding: 1rem;
+    gap: 1rem;
+    color: #6ba368;
+    height: fit-content;
+}
+
+
+.payment-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.span {
+    cursor: pointer;
+}
+
+hr {
+    border: 1px solid #6ba368;
+}
+
+.subBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.action {
+    justify-content: center;
+    align-items: center;
+}
+
+.action button {
+    font-size: 18px;
+    background: #e6fafc;
+    border: none;
+    padding: 4px 14px;
+    border-radius: 4px;
+    color: #6ba368;
+    width: 100%;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.box {
+    position: absolute;
+    top: 25vh;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    width: calc(100% - 10rem);
+    padding: 5rem;
+}
+
+.box input {
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 12px;
+    width: 80%;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #6ba368;
+}
+
+.box .action {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.box button {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    padding: 4px 18px;
+    background: #e6fafc;
+    color: #6ba368;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 20%;
+}
+
+@media screen and (width <=750px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .payment-box {
+        flex-direction: column;
+        gap: 0;
+        width: calc(100% - 2rem);
+    }
+
+    hr {
+        border: 0;
+    }
+
+    .box {
+        top: 6vh;
+        width: calc(100% - 2rem);
+        padding: 2rem 1rem;
+    }
+
+    .box button {
+        width: 100%;
+    }
+}

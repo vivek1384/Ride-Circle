@@ -1,0 +1,68 @@
+<app-header />
+<div class="container">
+    <div class="left">
+        <h1 class="h1">From : {{ride.from}} <span>|</span>To : {{ride.to}}</h1>
+        <h1 class="h1">Date : {{ride.date | date : 'dd-MM-yyyy'}} <span>|</span>Day : {{ride.date | date : 'EEEE'}}</h1>
+
+        <h1>Driver : </h1>
+        <div class="user-box">
+            <h2>{{ride.driverName}}</h2>
+            <h3>{{ride.driverEmail}}</h3>
+            <!-- <h3>Rating 4.5 out of 5</h3> -->
+            <h3>Car : {{ride.carname}}</h3>
+            <h3>Your ride will not confirm until driver accpet it.</h3>
+        </div>
+        <h1>Passangers :</h1>
+        <div class="user-box passanger-box">
+            @if(ride.request.length == 0){
+            <div class="passanger">
+                No passanger found.
+            </div>
+            }@else {
+            @for (item of ride.request; track $index) {
+            <div class="passanger">
+                <h2>{{item.requestFrom}}</h2>
+                <h3>From : {{item.from}} | To : {{item.to}}</h3>
+                <h3>Member : {{item.member}}</h3>
+                <hr style="margin-top: 1rem;">
+            </div>
+            }
+            }
+
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="right">
+        @for (item of reqList; track $index) {
+        <div class="payment-box" [ngStyle]="{'text-decoration' : item.markASC ? 'line-through' : 'none'}">
+            <h3>Request From : <span>{{item.requestFrom}}</span></h3>
+            <h3>From : <span>{{item.from}}</span></h3>
+            <h3>To : <span>{{item.to}}</span></h3>
+            <h3>Fee : <span>₹{{item.fee}}</span></h3>
+            <h3>Member : <span>× {{item.member}}</span></h3>
+            <hr>
+            <h3>Total : <span>₹{{item.total}}</span></h3>
+            @if(item.accepted == 'Pending'){
+            <div class="action">
+                <button (click)="acceptReq(item)">Accept</button>
+                <button (click)="declineReq(item)">Decline</button>
+            </div>
+            }@else if(item.accepted == 'Declined'){
+            <div class="action">
+                <button style="cursor: not-allowed;">Request declined.</button>
+            </div>
+            }@else {
+            @if(item.markASC){
+            <div class="action">
+                <button style="cursor: not-allowed;">Ride completed.</button>
+            </div>
+            }@else {
+            <div class="action">
+                <button style="cursor: not-allowed;">Request accepted.</button>
+            </div>
+            }
+            }
+        </div>
+        }
+    </div>
+</div>

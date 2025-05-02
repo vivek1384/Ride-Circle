@@ -1,0 +1,55 @@
+<app-header />
+<div class="container">
+    <div class="left">
+        <h1 class="h1">From : {{ride.from}} <span>|</span>
+            @if(ride.from.toLowerCase() != from?.toLowerCase()){
+            Via : {{from}} <span>|</span>
+            }@if(ride.to.toLowerCase() != to?.toLowerCase()){
+            Via : {{to}} <span>|</span>
+            }
+            To : {{ride.to}}</h1>
+        <h1 class="h1">Date : {{ride.date | date : 'dd-MM-yyyy'}} <span>|</span>Day : {{ride.date | date : 'EEEE'}}</h1>
+
+        <h1>Driver : </h1>
+        <div class="user-box">
+            <h2>{{ride.driverName}}</h2>
+            <h3>{{ride.driverEmail}}</h3>
+            <!-- <h3>Rating 4.5 out of 5</h3> -->
+            <h3>Car : {{ride.carname}}</h3>
+            <h3>Your ride will not confirm until driver accpet your request.</h3>
+        </div>
+        <h1>Passangers :</h1>
+        <div class="user-box passanger-box">
+            @if(ride.request.length == 0){
+            <div class="passanger">
+                No passanger found.
+            </div>
+            }@else {
+            @for (item of ride.request; track $index) {
+            <div class="passanger">
+                <h2>{{item.requestFrom}}</h2>
+                <h3>From : {{item.from}} | To : {{item.to}}</h3>
+                <h3>Member : {{item.member}}</h3>
+                <hr style="margin-top: 1rem;">
+            </div>
+            }
+            }
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="right">
+        <div class="payment-box">
+            <h3>From : <span>{{from}}</span></h3>
+            <h3>To : <span>{{to}}</span></h3>
+            <h3>Fee : <span>₹{{fee}}</span></h3>
+            <h3>Member : <span>× {{member}}</span></h3>
+            <hr>
+            <h3>Total : <span>₹{{total}}</span></h3>
+        </div>
+        @if(request.sent){
+        <button>Request Sent.</button>
+        }@else {
+        <button (click)="senRequest()">Send Request</button>
+        }
+    </div>
+</div>

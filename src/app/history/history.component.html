@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="main">
+    <div class="container">
+        @for (item of reqList; track $index) {
+        <div class="payment-box" [ngStyle]="{'text-decoration' : item.markASC ? 'line-through' : 'none'}">
+            <div class="subBox">
+                <div>
+                    <h3>Request To : <span class="span">{{item.requestTo}} </span></h3>
+                    <h3>From : <span>{{item.from}}</span></h3>
+                    <h3>To : <span>{{item.to}}</span></h3>
+                    <h3>Request Status : <span>{{item.accepted}}</span></h3>
+                </div>
+                <div>
+                    <h3>Fee : <span>₹{{item.fee}}</span></h3>
+                    <h3>Member : <span>× {{item.member}}</span></h3>
+                    <h3>Total : <span>₹{{item.total}}</span></h3>
+                </div>
+            </div>
+            <div class="action">
+                @if(item.accepted == 'Pending'){
+                <button (click)="unSendReq(item.id)">Unsend Request</button>
+                }@else if(item.accepted == 'Accepted'){
+                @if(!item.markASC){
+                <button (click)="markAsRead(item)">Mark as Completed</button>
+                }@else {
+                <button>!! Marked as completed already !!</button>
+                <button (click)="onReview(item.requestToId)">Want to give review to {{item.requestTo}}</button>
+                }
+                }
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+@if(openBox){
+<div class="box">
+    <input type="text" placeholder="Your Name" [(ngModel)]="review.reviewerName" name="reviewerName">
+    <input type="number" placeholder="Rating" [(ngModel)]="review.rating" name="rating">
+    <input type="text" placeholder="Review" [(ngModel)]="review.reviewMessage" name="reviewMessage">
+    <div class=" action">
+        <button (click)="addReview()">Submit Review</button>
+        <button (click)="closeReview()">Close</button>
+    </div>
+</div>
+}

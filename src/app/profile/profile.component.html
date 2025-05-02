@@ -1,0 +1,50 @@
+<app-header />
+<div class="container">
+    <div class="profile-box">
+        <div class="left">
+            {{letter[0]}}
+        </div>
+        <div class="right">
+            <h1>{{user.name}}</h1>
+            <h2>E-mail : {{user.email}}</h2>
+            <h2>Password :
+                @if(!passOpen){
+                •••••• <span (click)="passOpenFun()" style="cursor: pointer;"><fa-icon [icon]="icon"></fa-icon></span>
+                }@else {
+                {{user.password}} <span (click)="passOpenFun()" style="cursor: pointer;"><fa-icon
+                        [icon]="icon2"></fa-icon></span>
+                }
+            </h2>
+        </div>
+    </div>
+    <div class="overview">
+        <div class="left">
+            <div class="ride">
+                <h2>Ride Created by you : </h2>
+                <h1>{{rides}}</h1>
+            </div>
+            <div class="request">
+                <h2>Request sent by you : </h2>
+                <h1>{{requests}}</h1>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Reviews : </h1>
+            <div class="right-c">
+                @if(user.review.length == 0){
+                <div class="review">
+                    <h2>No review Found.</h2>
+                </div>
+                }@else {
+                @for (item of user.review; track $index) {
+                <div class="review">
+                    <h2>Name : {{item.reviewerName}}</h2>
+                    <h2>Rating : {{item.rating}}</h2>
+                    <h2>Review : {{item.reviewMessage}}</h2>
+                </div>
+                }
+                }
+            </div>
+        </div>
+    </div>
+</div>

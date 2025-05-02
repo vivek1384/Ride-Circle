@@ -1,0 +1,117 @@
+.container {
+    height: calc(94dvh - 4rem);
+    background: #e6fafc;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 1rem;
+    color: #6ba368;
+}
+
+.container hr {
+    border: 1px solid #6ba368;
+}
+
+.container .left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.left form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    gap: 10px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.container form input {
+    font-size: 19px;
+    padding: 4px;
+    padding-left: 10px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    color: #6ba368;
+}
+
+.container form button {
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 12px;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #6ba368;
+    border: 2px solid #fff;
+}
+
+.container form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.container form div label {
+    width: 100%;
+}
+
+.container form div input {
+    width: 100%;
+}
+
+.container form button:hover {
+    background: #e6fafc;
+    border: 2px solid #6ba368;
+    color: #6ba368;
+}
+
+.container .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    height: calc(100% - 2rem);
+    overflow-y: scroll;
+}
+
+.right .ride {
+    border: 2px solid #6ba368;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ride button {
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #6ba368;
+    width: 40%;
+    color: #6ba368;
+    cursor: pointer;
+}
+
+.ride button:hover {
+    border: 2px solid #fff;
+    background: #fff;
+}
+
+@media screen and (width <=750px) {
+    .container {
+        flex-direction: column;
+        height: fit-content;
+    }
+}
